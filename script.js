@@ -68,7 +68,7 @@ function sendSignalingMessage(message) {
 }
 
 function startWebRTC(isOfferer) {
-  console.log('Starting WebRTC in as', isOfferer ? 'offerer' : 'waiter');
+  console.log('Starting CHAT in as', isOfferer ? 'offerer' : 'waiter');
   pc = new RTCPeerConnection(configuration);
 
   // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
@@ -142,7 +142,7 @@ function setupDataChannel() {
 function checkDataChannelState() {
   console.log('WebRTC channel state is:', dataChannel.readyState);
   if (dataChannel.readyState === 'open') {
-    insertMessageToDOM({content: 'WebRTC data channel is now open'});
+    insertMessageToDOM({content: 'he/she is here, say hi!'});
   }
 }
 
